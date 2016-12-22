@@ -18,6 +18,8 @@ def BeforeCommand ():
      print("{          Starting The Program            }")
      print("{                almost ready              }")
      print("\~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~/")
+     print("")
+     print("Please add even the sort of document like .txt .sh")
      Docname = input("Document name: ")
      Docname
      print("{DEVELOPING",Docname,"}")
@@ -30,19 +32,15 @@ if Enter == '':
              sleep(1)
              print("") 
     
-     
-     
-     
-    
 BeforeCommand()
     
 
 while ProCommand != 'save':
       input("") 
-      if ProCommand == 'save':
-         os.mkdir(Docname)
-         print("ENDED PROCOMMAND")
-         break
+      if ProCommand == "save":
+          os.mkdir(Docname)
+          print("ENDED PROCOMMAND")
+          break
 
 import PythonOS
 

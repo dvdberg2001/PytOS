@@ -12,15 +12,15 @@ def Make_USER():
         print(Exception)
 
 
-
+Make_USER()
 
 username = ''
 password = ''
 
-while username != 'PytOS':
+while username == 'PytOS':
       username = input("Username: ")
 
-
+      if username == 'PytOS':
          print("Loading...")
          sleep(0.25)
          print("---------------")

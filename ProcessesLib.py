@@ -16,7 +16,7 @@ def ProccesInfo():
       os.system("cls")
       if Enter == 'exit':
          break
-      from PythonOS import PythOS
+      from PythonOS import PytOS
 def UserInformation():
    os.system("echo %username%")
 def Computer_Tree():

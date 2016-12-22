@@ -1,3 +1,5 @@
+﻿__author__      = "DAAN VAN DEN BERG"
+
 import os
 from time import ctime
 import subprocess
@@ -14,7 +16,7 @@ from collections import namedtuple
 def Start_os():
     print("+++++++++++++++++++++++++")
     print("+    Welcome on PytOS   +")
-    print("+       Version 0.8.6   +")
+    print("+       Version 1.0.0   +")
     print("+       Try helpme()    +")
     print("+     Still in BETA     +")
     print("+++++++++++++++++++++++++")
@@ -32,6 +34,8 @@ def helpme():
     print("|         tictactoe = A funny game           |")
     print("|         DiskSpace = Show the diskspace     |")
     print("|         Time_Now = The time right now      |")
+    print("|        Callculator = open the callculator  |")
+    print("|        Procceslist = Show procceses        |")
     print("|        About_me = let us now we you are    |")
     print("|        More_info = Many info of the OS     |")
     print("|        My_info = Info about myself         |")
@@ -57,7 +61,7 @@ def Time_Now():
     print(ctime())
 
 
-def About_me():
+def RegAbout_me(name, age):
     print("Say somthing about you")
     name = input("What is your name: ")
     age = input("What is your age: ")
@@ -111,7 +115,7 @@ def SShutdown():
 
 def More_info():
     print("----------------------------------")
-    print("|   Current Version is 0.7.4     |")
+    print("|   Current Version is 1.0.0     |")
     print("|        PYTHON BASED OS         |")
     print("|       CROSS-PLATFORM OS        |")
     print("| {DEVELOPT IN THE NETHERLANDS}  |")
@@ -155,6 +159,7 @@ while choice != 'quit':
     
     
     display_title_bar()
+
     if choice == 'helpme':
        helpme()
     elif choice == 'CWT':
@@ -163,8 +168,8 @@ while choice != 'quit':
         CLT()
     elif  choice == 'Time_Now':
         Time_Now()
-    elif choice == 'About_me':
-        About_me()
+    elif choice == 'Registration':
+        RegAbout_me()
     elif choice == 'shutdown':
         shutdown()
     elif choice == '{SDown}':
@@ -180,18 +185,24 @@ while choice != 'quit':
     elif choice == 'Notepad':
         notepad()    
     elif choice == 'ProCommand':
-       from ProCommandLib import ProCommand
+       from ProCommandLib import *
     elif choice == 'test':
-         from RaspberryPiLib import GPIO_Control
+         from ProcessesLib import Computer_Tree
     elif choice == 'tictactoe':
         from TicTacToe import *
     elif choice == 'DiskSpace':
         from DiskManager import FreeDiskSpace
     elif choice == 'Procceslist':
         from ProcessesLib import ProccesInfo
+    elif choice == 'Callculator':
+        from Callculator import *
+    elif choice == 'ping':
+        from InternetSystem import *
+    elif choice == 'MyConnection':
+        from ConnectionLib import *
     elif choice == 'UserInfo':
-        from ProccesLib import UserInformation
-    elif choice == '': 
+        from ProcessesLib import UserInformation
+    elif choice == '':
         print("That is wrong. Try to typ somthing.")
     else:
         print(choice,"is a wrong command. Try again. (helpme)")
